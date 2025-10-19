@@ -560,7 +560,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			cost = 2,
 			max_purchases = 4
 		),
-		"Fragmentation Grenadesx2 (4)" = list(
+		"Fragmentation Grenades (4)" = list(
 			list(type =/obj/item/Canister_bomb, count = 1),
 			cost = 4,
 			max_purchases = 5
