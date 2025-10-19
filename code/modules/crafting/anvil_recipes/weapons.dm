@@ -21,6 +21,13 @@
 	craftdiff = 1
 	createditem_extra = 3
 
+/datum/anvil_recipe/weapons/tin/grenade_shell	name = "2x Grenade shells”
+	recipe_name = "Grenade Casings."
+	created_item = /obj/item/grenadeshell
+	craftdiff = 3
+	createditem_extra = 1
+	
+
 //////////////////////////////////////////////////////////////////////////////////////////////
 // --------- COPPER -----------
 /datum/anvil_recipe/weapons/copper
