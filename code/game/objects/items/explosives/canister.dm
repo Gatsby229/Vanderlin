@@ -70,7 +70,7 @@
 	/// if set, will spew out projectiles of this type
 	var/shrapnel_type = /obj/projectile/bullet/shrap
 	/// the higher this number, the more projectiles are created as shrapnel
-	var/shrapnel_radius = 16
+	var/shrapnel_radius = 8
 	///Did we add the component responsible for spawning sharpnel to this?
 	var/shrapnel_initialized
 
