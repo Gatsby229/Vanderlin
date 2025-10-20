@@ -69,11 +69,6 @@
 	craft_time = 1 SECONDS
 	subtypes_allowed = TRUE
 	reagent_subtypes_allowed = TRUE
-
-
-
-
-
 /datum/repeatable_crafting_recipe/bomb/canister_bomb
 	name = "Canister Grenade"
 
@@ -87,10 +82,7 @@
 	starting_atom = /obj/item/natural/fibers
 	attacked_atom = /obj/item/explosive/grenadeshell
 	output = /obj/item/explosive/canister_bomb
-	craft_time =11 SECONDS
-            craftdiff = 5
+	craft_time = 11 SECONDS
+    craftdiff = 5
 	subtypes_allowed = TRUE
 	reagent_subtypes_allowed = TRUE
-
-//let ME CHANGE THINGS
-
