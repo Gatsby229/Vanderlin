@@ -34,34 +34,14 @@
 	slot_flags = ITEM_SLOT_HIP
 	grid_height = 64
 	grid_width = 32
-
-
 	impact_explode = FALSE
 
-	/obj/item/explosive/canister_bomb
 	prob2fail = 5
 
-
 	ex_dev = 1
-	///how big of a heavy explosion radius on prime
 	ex_heavy = 3
-	///how big of a light explosion radius on prime
 	ex_light = 2
-	///how big of a flame explosion radius on prime
 	ex_flame = 1
-	///how big the hotspot range is
-	ex_hotspot_range = 0
-	///do we smoke?
-	ex_smoke = FALSE
-
-	// dealing with creating a [/datum/component/pellet_cloud] on detonate
-	/// if set, will spew out projectiles of this type
+	
 	shrapnel_type = /obj/projectile/bullet/shrap
-	/// the higher this number, the more projectiles are created as shrapnel
 	shrapnel_radius = 8
-	///Did we add the component responsible for spawning sharpnel to this?
-	shrapnel_initialized
-
-
-
-//I hate this shit code...
