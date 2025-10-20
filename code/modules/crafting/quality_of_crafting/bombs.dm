@@ -86,7 +86,7 @@
 
 	starting_atom = /obj/item/natural/fibers
 	attacked_atom = /obj/item/grenadeshell
-	output = /obj/item/canister_bomb
+	output = /obj/item/explosive/canister_bomb
 	craft_time =11 SECONDS
             craftdiff = 5
 	subtypes_allowed = TRUE
