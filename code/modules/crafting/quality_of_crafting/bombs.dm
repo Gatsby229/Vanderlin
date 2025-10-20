@@ -80,12 +80,12 @@
 	requirements = list(
 		/obj/item/natural/fibers = 1,
 		/obj/item/reagent_containers/powder/blastpowder = 2,
-		/obj/item/grenadeshell = 1,
-                        /obj/item/ammo_casing/caseless/bullet = 8,
+		/obj/item/explosive/grenadeshell = 1,
+        /obj/item/ammo_casing/caseless/bullet = 8,
 	)
 
 	starting_atom = /obj/item/natural/fibers
-	attacked_atom = /obj/item/grenadeshell
+	attacked_atom = /obj/item/explosive/grenadeshell
 	output = /obj/item/explosive/canister_bomb
 	craft_time =11 SECONDS
             craftdiff = 5
