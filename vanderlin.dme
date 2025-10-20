@@ -1589,7 +1589,6 @@
 #include "code\game\objects\items\chimeric_organs\pilltin.dm"
 #include "code\game\objects\items\devices\devies.dm"
 #include "code\game\objects\items\devices\flashlight.dm"
-#include "code\game\objects\items\explosives\canister.dm"
 #include "code\game\objects\items\explosives\_base.dm"
 #include "code\game\objects\items\explosives\bottle_bomb.dm"
 #include "code\game\objects\items\explosives\canister.dm"
