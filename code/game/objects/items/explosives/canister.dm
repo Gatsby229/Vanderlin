@@ -16,7 +16,7 @@
 /obj/item/explosive/grenadeshell
 	name = "Grenade Shell"
 	desc = "A metal tube with a tight screw cap and slots for shrapnel."
-	icon_state = ""
+	icon_state = "grenade_shell"
 	icon = 'icons/obj/bombs.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 0
@@ -27,7 +27,7 @@
 /obj/item/explosive/canister_bomb
 	name = "Canister Bomb"
 	desc = "A professional Grenzelhoftan explosive, filled with lead shrapnel and sticky blastpowder."
-	icon_state = ""
+	icon_state = "canbomb"
 	icon = 'icons/obj/bombs.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 0
