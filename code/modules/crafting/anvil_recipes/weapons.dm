@@ -27,9 +27,6 @@
 	created_item = /obj/item/explosive/grenadeshell
 	craftdiff = 3
 	createditem_extra = 1
-	///probably broken because of the /explosive/ but ehhhhhhhhhhhh itll be fine, totally
-	
-
 //////////////////////////////////////////////////////////////////////////////////////////////
 // --------- COPPER -----------
 /datum/anvil_recipe/weapons/copper
