@@ -24,7 +24,7 @@
 	grid_height = 64
 	grid_width = 32
 
-/obj/item/canister_bomb
+/obj/item/explosive/canister_bomb
 	name = "Canister Bomb"
 	desc = "A professional Grenzelhoftan explosive, filled with lead shrapnel and sticky blastpowder."
 	icon_state = ""
@@ -84,7 +84,7 @@
  * Arguments:
  * * mob/living/carbon/human/user - who is priming our grenade?
  */
-/obj/item/canister_bomb/proc/botch_check(mob/living/carbon/human/user)
+/obj/item/explosive/canister_bomb/proc/botch_check(mob/living/carbon/human/user)
 	if(prob(prob2fail))
 		return TRUE
 
@@ -92,7 +92,7 @@
 		to_chat(user, span_warning("What the... [src] is stuck to your hand!"))
 		ADD_TRAIT(src, TRAIT_NODROP, "sticky")
 
-/obj/item/canister_bomb/attack_self(mob/user)
+/obj/item/explosive/canister_bomb/attack_self(mob/user)
 	if(HAS_TRAIT(src, TRAIT_NODROP))
 		to_chat(user, span_notice("You try prying [src] off your hand..."))
 		if(do_after(user, 7 SECONDS, target = src))
@@ -100,7 +100,7 @@
 			REMOVE_TRAIT(src, TRAIT_NODROP, "sticky")
 		return
 
-/obj/item/canister_bomb/fire_act(added, maxstacks)
+/obj/item/explosive/canister_bomb/fire_act(added, maxstacks)
 	if (active)
 		return
 	if(usr)
@@ -110,7 +110,7 @@
 		arm_grenade(null)
 	. = ..()
 
-/obj/item/canister_bomb/spark_act()
+/obj/item/explosive/canister_bomb/spark_act()
 	if (active)
 		return
 	if(usr)
@@ -120,14 +120,14 @@
 		arm_grenade(null)
 	. = ..()
 
-/obj/item/canister_bomb/extinguish()
+/obj/item/explosive/canister_bomb/extinguish()
 	. = ..()
 	if(explode_timer)
 		deltimer(explode_timer)
 		explode_timer = null
 	icon_state = initial(icon_state)
 
-/obj/item/canister_bomb/proc/log_grenade(mob/user)
+/obj/item/explosive/canister_bomb/proc/log_grenade(mob/user)
 	log_bomber(user, "has primed a", src, "for detonation", message_admins = !dud_flags)
 
 
@@ -135,7 +135,7 @@
  * arm_grenade (formerly preprime) refers to when a grenade with a standard time fuze is activated, making it go beepbeepbeep and then detonate a few seconds later.
  * Grenades with other triggers like remote igniters probably skip this step and go straight to [/obj/item/Canister_bomb/proc/detonate]
  */
-/obj/item/canister_bomb/proc/arm_grenade(mob/user, delayoverride, msg = TRUE, volume = 60)
+/obj/item/explosive/canister_bomb/proc/arm_grenade(mob/user, delayoverride, msg = TRUE, volume = 60)
 	log_grenade(user) //Inbuilt admin procs already handle null users
 	playsound(src.loc, 'sound/items/fuse.ogg', 100)
 	if(user)
@@ -157,7 +157,7 @@
  * Arguments:
  * * lanced_by- If this grenade was detonated by an elance, we need to pass that along with the COMSIG_GRENADE_DETONATE signal for pellet clouds
  */
-/obj/item/canister_bomb/proc/detonate(mob/living/lanced_by)
+/obj/item/explosive/canister_bomb/proc/detonate(mob/living/lanced_by)
 	if (dud_flags)
 		active = FALSE
 		update_appearance()
@@ -176,12 +176,12 @@
 	qdel(src)
 	return TRUE
 
-/obj/item/canister_bomb/proc/update_mob()
+/obj/item/explosive/canister_bomb/proc/update_mob()
 	if(ismob(loc))
 		var/mob/mob = loc
 		mob.dropItemToGround(src)
 
-/obj/item/canister_bomb/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+/obj/item/explosive/canister_bomb/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	..()
 	if(impact_explode)
 		if(active)
