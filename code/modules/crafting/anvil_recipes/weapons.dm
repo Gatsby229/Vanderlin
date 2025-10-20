@@ -27,6 +27,7 @@
 	created_item = /obj/item/explosive/grenadeshell
 	craftdiff = 3
 	createditem_extra = 1
+	///jokes on you whoever said lead bullets were the only tin weapon, may I introduce the pipe casing.
 //////////////////////////////////////////////////////////////////////////////////////////////
 // --------- COPPER -----------
 /datum/anvil_recipe/weapons/copper
