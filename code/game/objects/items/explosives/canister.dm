@@ -13,7 +13,7 @@
 
 
 
-/obj/item/grenadeshell
+/obj/item/explosive/grenadeshell
 	name = "Grenade Shell"
 	desc = "A metal tube with a tight screw cap and slots for shrapnel."
 	icon_state = ""
