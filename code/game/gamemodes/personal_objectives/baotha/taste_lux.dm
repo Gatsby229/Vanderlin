@@ -17,13 +17,20 @@
 
 /datum/objective/personal/taste_lux/proc/on_lux_tasted()
 	SIGNAL_HANDLER
+	if(completed)
+		return
+
+	complete_objective()
+
+/datum/objective/personal/taste_lux/complete_objective()
+	. = ..()
 	to_chat(owner.current, span_greentext("You have tasted the divine essence, completing Baotha's objective!"))
-	owner.current.adjust_triumphs(triumph_count)
-	completed = TRUE
 	adjust_storyteller_influence(BAOTHA, 20)
-	owner.current.set_stat_modifier("baotha_blessing", STATKEY_LCK, 1)
-	escalate_objective()
 	UnregisterSignal(owner.current, COMSIG_LUX_TASTED)
+
+/datum/objective/personal/taste_lux/reward_owner()
+	. = ..()
+	owner.current.set_stat_modifier("baotha_blessing", STATKEY_LCK, 1)
 
 /datum/objective/personal/taste_lux/update_explanation_text()
 	explanation_text = "Experience the divine by tasting the forbidden Lux essence! Baotha is watching..."

@@ -8,8 +8,7 @@
 
 /datum/objective/personal/retainer/on_creation()
 	. = ..()
-	if(owner?.current)
-		RegisterSignal(SSdcs, COMSIG_GLOBAL_ROLE_CONVERTED, PROC_REF(on_retainer_recruited))
+	RegisterSignal(SSdcs, COMSIG_GLOBAL_ROLE_CONVERTED, PROC_REF(on_retainer_recruited))
 	update_explanation_text()
 
 /datum/objective/personal/retainer/Destroy()
@@ -22,15 +21,13 @@
 		return
 
 	retainers_recruited++
-	if(retainers_recruited >= 1 && !completed)
+	if(retainers_recruited >= 1)
 		complete_objective()
 
-/datum/objective/personal/retainer/proc/complete_objective()
+/datum/objective/personal/retainer/complete_objective()
+	. = ..()
 	to_chat(owner.current, span_greentext("You have recruited a retainer and completed Astrata's objective!"))
-	owner.current.adjust_triumphs(triumph_count)
-	completed = TRUE
 	adjust_storyteller_influence(ASTRATA, 20)
-	escalate_objective()
 
 /datum/objective/personal/retainer/update_explanation_text()
 	explanation_text = "Recruit at least one retainer to serve you and to demonstrate your ability to lead to Astrata."

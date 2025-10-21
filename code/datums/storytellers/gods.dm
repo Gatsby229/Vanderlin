@@ -228,7 +228,7 @@
 
 	influence_sets = list(
 		"Set 1" = list(
-			STATS_POTIONS_BREWED = list("name" = "Potions brewed:", "points" = 5.25, "capacity" = 80),
+			STATS_POTIONS_BREWED = list("name" = "Potions brewed:", "points" = 2, "capacity" = 80),
 		),
 		"Set 2" = list(
 			STATS_WOUNDS_SEWED = list("name" = "Wounds sewed up:", "points" = 0.45, "capacity" = 100),
@@ -537,7 +537,7 @@
 			STATS_ITEMS_PICKPOCKETED = list("name" = "Items pickpocketed:", "points" = 5.25, "capacity" = 80),
 		),
 		"Set 2" = list(
-			STATS_SHRINE_VALUE = list("name" = "Value offered to his idol:", "points" = 0.085, "capacity" = 70),
+			STATS_SHRINE_VALUE = list("name" = "Value offered to his idol:", "points" = 0.07, "capacity" = 70),
 		),
 		"Set 3" = list(
 			STATS_GREEDY_PEOPLE = list("name" = "Number of greedy people:", "points" = 6, "capacity" = 70),

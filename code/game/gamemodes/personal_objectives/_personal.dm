@@ -9,6 +9,14 @@
 	if(owner && !(owner in GLOB.personal_objective_minds))
 		GLOB.personal_objective_minds |= owner
 
+/datum/objective/personal/proc/complete_objective()
+	completed = TRUE
+	reward_owner()
+	escalate_objective()
+
+/datum/objective/personal/proc/reward_owner()
+	owner.adjust_triumphs(triumph_count)
+
 /datum/objective/personal/proc/escalate_objective(event_track = EVENT_TRACK_PERSONAL, second_event_track = EVENT_TRACK_INTERVENTION)
 	if(event_track)
 		var/first_points_to_add = SSgamemode.point_thresholds[event_track] * rand(0.5, 0.75)

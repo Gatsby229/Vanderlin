@@ -28,14 +28,15 @@
 	if(released_count >= required_count)
 		complete_objective()
 
-/datum/objective/personal/release_fish/proc/complete_objective()
+/datum/objective/personal/release_fish/complete_objective()
+	. = ..()
 	to_chat(owner.current, span_greentext("A rare fish has been returned to the depths, pleasing Abyssor!"))
-	owner.current.adjust_triumphs(triumph_count)
-	completed = TRUE
 	adjust_storyteller_influence(ABYSSOR, 20)
-	owner.current.adjust_skillrank(/datum/skill/labor/fishing, 1)
-	escalate_objective()
 	UnregisterSignal(SSdcs, COMSIG_GLOBAL_FISH_RELEASED)
+
+/datum/objective/personal/release_fish/reward_owner()
+	. = ..()
+	owner.current.adjust_skillrank(/datum/skill/labor/fishing, 1)
 
 /datum/objective/personal/release_fish/update_explanation_text()
 	explanation_text = "Have any rare or better fish returned to the water to honor Abyssor."

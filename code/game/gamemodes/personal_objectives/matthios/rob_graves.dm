@@ -28,14 +28,15 @@
 	else
 		to_chat(owner.current, span_notice("Grave robbed! Rob [graves_required - graves_robbed] more to complete Matthios' task."))
 
-/datum/objective/personal/grave_robbery/proc/complete_objective()
+/datum/objective/personal/grave_robbery/complete_objective()
+	. = ..()
 	to_chat(owner.current, span_greentext("You've robbed enough graves to earn Matthios' respect!"))
-	owner.current.adjust_triumphs(triumph_count)
-	completed = TRUE
 	adjust_storyteller_influence(MATTHIOS, 20)
-	ADD_TRAIT(owner.current, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
-	escalate_objective()
 	UnregisterSignal(owner.current, COMSIG_GRAVE_ROBBED)
+
+/datum/objective/personal/grave_robbery/reward_owner()
+	. = ..()
+	ADD_TRAIT(owner.current, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
 
 /datum/objective/personal/grave_robbery/update_explanation_text()
 	explanation_text = "Rob at least [graves_required] graves to earn Matthios' respect."

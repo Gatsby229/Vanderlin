@@ -9,7 +9,7 @@
 	. = ..()
 	if(owner?.current)
 		ADD_TRAIT(owner.current, TRAIT_SECRET_OFFICIANT, TRAIT_GENERIC)
-		RegisterSignal(SSdcs, COMSIG_GLOBAL_MARRIAGE, PROC_REF(on_global_marriage))
+	RegisterSignal(SSdcs, COMSIG_GLOBAL_MARRIAGE, PROC_REF(on_global_marriage))
 	update_explanation_text()
 
 /datum/objective/personal/marriage_broker/Destroy()
@@ -21,11 +21,12 @@
 	if(completed)
 		return
 
-	to_chat(owner.current, span_greentext("A marriage has occurred in the world, completing Eora's objective!"))
-	owner.current.adjust_triumphs(triumph_count)
-	completed = TRUE
+	complete_objective()
+
+/datum/objective/personal/marriage_broker/complete_objective()
+	. = ..()
+	to_chat(owner.current, span_greentext("A marriage has happened, completing Eora's objective!"))
 	adjust_storyteller_influence(EORA, 20)
-	escalate_objective()
 	UnregisterSignal(SSdcs, COMSIG_GLOBAL_MARRIAGE)
 
 /datum/objective/personal/marriage_broker/update_explanation_text()

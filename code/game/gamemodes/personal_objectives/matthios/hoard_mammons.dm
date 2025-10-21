@@ -31,13 +31,17 @@
 
 	var/mammon_count = get_mammons_in_atom(user)
 	if(mammon_count >= target_mammons && !completed)
-		to_chat(user, span_greentext("You have accumulated [mammon_count] mammons, completing Matthios' objective!"))
-		user.adjust_triumphs(triumph_count)
-		completed = TRUE
-		adjust_storyteller_influence(MATTHIOS, 20)
-		ADD_TRAIT(user, TRAIT_SEEPRICES, TRAIT_GENERIC)
-		escalate_objective()
-		STOP_PROCESSING(SSprocessing, src)
+		complete_objective()
+
+/datum/objective/personal/hoard_mammons/complete_objective()
+	. = ..()
+	to_chat(owner.current, span_greentext("You have accumulated enough mammons, completing Matthios' objective!"))
+	adjust_storyteller_influence(MATTHIOS, 20)
+	STOP_PROCESSING(SSprocessing, src)
+
+/datum/objective/personal/hoard_mammons/reward_owner()
+	. = ..()
+	ADD_TRAIT(owner.current, TRAIT_SEEPRICES, TRAIT_GENERIC)
 
 /datum/objective/personal/hoard_mammons/update_explanation_text()
 	explanation_text = "Accumulate at least [target_mammons] mammons in your possession to demonstrate your greediness to Matthios."

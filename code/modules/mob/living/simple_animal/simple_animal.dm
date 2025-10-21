@@ -496,6 +496,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 		if(happiness_message)
 			final_message += " [happiness_message]"
 		to_chat(user, span_notice("[final_message]"))
+		SEND_SIGNAL(user, COMSIG_MOB_BUTCHERED, src)
 		gib()
 
 /mob/living/proc/butcher_summary(botch_count, normal_count, perfect_count, bonus_count, botch_chance, perfect_chance, happiness_bonus)

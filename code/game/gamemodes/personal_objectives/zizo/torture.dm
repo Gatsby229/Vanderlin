@@ -27,12 +27,10 @@
 	if(torture_count >= required_count)
 		complete_objective(victim)
 
-/datum/objective/personal/torture/proc/complete_objective(mob/living/victim)
+/datum/objective/personal/torture/complete_objective(mob/living/victim)
+	. = ..()
 	to_chat(owner.current, span_greentext("You have extracted the truth through pain, satisfying Zizo!"))
-	owner.current.adjust_triumphs(triumph_count)
-	completed = TRUE
 	adjust_storyteller_influence(ZIZO, 20)
-	escalate_objective()
 	UnregisterSignal(owner.current, COMSIG_TORTURE_PERFORMED)
 
 /datum/objective/personal/torture/update_explanation_text()
