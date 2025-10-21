@@ -2,7 +2,7 @@
 	name = "lead fragment"
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "small"
-	damage = 60
+	damage = 35
 	damage_type = BRUTE
 	woundclass = BCLASS_SHOT
 	range = 30
@@ -40,4 +40,4 @@
 	ex_flame = 1
 	
 	shrapnel_type = /obj/projectile/bullet/shrap
-	shrapnel_radius = 8
+	shrapnel_radius = 6
