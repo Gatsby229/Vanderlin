@@ -4,6 +4,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	grid_width = 32
 	grid_height = 64
+	slot_flags = ITEM_SLOT_HIP
 	var/list/types = list()
 	var/open
 	var/can_spawn = TRUE

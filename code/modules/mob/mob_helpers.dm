@@ -1002,7 +1002,7 @@
 	if(job)
 		var/datum/job/J = SSjob.GetJob(job)
 		if(!J)
-			return "Unknown"
+			return job
 		used_title = J.get_informed_title(src)
 	if(is_apprentice())
 		used_title = return_our_apprentice_name()

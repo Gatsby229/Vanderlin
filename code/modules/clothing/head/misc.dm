@@ -49,7 +49,6 @@
 	desc = "A simple brimmed hat that provides some relief from the sun."
 	icon_state = "brimmed"
 
-
 //................ Fur Hats ............... //
 /obj/item/clothing/head/hatfur
 	name = "fur hat"

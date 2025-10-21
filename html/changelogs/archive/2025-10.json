@@ -713,5 +713,12 @@
                 "rscdel": "Surplus Crown"
             }
         ]
+    },
+    "2025-10-21": {
+        "snowyseshi": [
+            {
+                "map": "added various items to the vampire lord manor"
+            }
+        ]
     }
 }
