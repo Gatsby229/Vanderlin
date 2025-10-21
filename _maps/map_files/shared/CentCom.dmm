@@ -608,6 +608,7 @@
 	pixel_x = -4;
 	pixel_y = 3
 	},
+/obj/item/storage/backpack/satchel/surgbag/shit,
 /turf/open/floor/blocks/paving/vert,
 /area/rogue/indoors/vampire_manor)
 "bU" = (
@@ -825,6 +826,8 @@
 	pixel_x = 1;
 	pixel_y = -5
 	},
+/obj/item/natural/bundle/silk,
+/obj/item/natural/bundle/silk,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/vampire_manor)
 "cG" = (
@@ -1142,6 +1145,10 @@
 	},
 /obj/structure/fluff/walldeco/bigpainting/lake,
 /obj/item/textbook/novice,
+/obj/item/clothing/face/spectacles,
+/obj/item/clothing/face/spectacles/golden,
+/obj/item/clothing/face/spectacles/inqglasses,
+/obj/item/clothing/face/spectacles/sglasses,
 /turf/open/floor/herringbone,
 /area/rogue/indoors/vampire_manor)
 "dR" = (
@@ -1154,6 +1161,11 @@
 /area/rogue/indoors/vampire_manor)
 "dU" = (
 /obj/structure/mannequin/male/female,
+/obj/item/clothing/head/bardhat,
+/obj/item/clothing/shirt/tunic/noblecoat,
+/obj/item/clothing/pants/tights/colored/random,
+/obj/item/clothing/gloves/fingerless,
+/obj/item/clothing/shoes/boots,
 /turf/open/floor/herringbone,
 /area/rogue/indoors/vampire_manor)
 "dV" = (
@@ -1770,6 +1782,14 @@
 /obj/item/ammo_holder/quiver/arrows,
 /obj/item/gun/ballistic/revolver/grenadelauncher/bow,
 /turf/open/floor/hexstone,
+/area/rogue/indoors/vampire_manor)
+"ip" = (
+/obj/structure/mannequin/male/female,
+/obj/item/clothing/shoes/nobleboot,
+/obj/item/clothing/pants/tights/colored/black,
+/obj/item/clothing/shirt/dress/silkdress/colored/random,
+/obj/item/clothing/head/hatfur,
+/turf/open/floor/herringbone,
 /area/rogue/indoors/vampire_manor)
 "is" = (
 /obj/structure/table/wood/large_new,
@@ -2601,10 +2621,20 @@
 /turf/open/floor/dirt,
 /area/rogue/outdoors/bog/inhumen_camp)
 "nZ" = (
-/obj/structure/closet/crate/crafted_closet/inn/chest,
-/obj/item/reagent_containers/glass/bottle/healthpot,
-/obj/item/reagent_containers/glass/bottle/healthpot,
-/obj/item/reagent_containers/glass/bottle/healthpot,
+/obj/structure/closet/crate/crafted_closet/inn,
+/obj/item/clothing/armor/leather/jacket/hand,
+/obj/item/clothing/armor/leather/jacket/leathercoat/black,
+/obj/item/clothing/shirt/undershirt/fancy,
+/obj/item/clothing/shoes/boots,
+/obj/item/clothing/cloak/cape,
+/obj/item/clothing/shirt/tunic/colored/black,
+/obj/item/clothing/gloves/angle,
+/obj/item/storage/belt/leather,
+/obj/item/clothing/shirt/ornate/tunic,
+/obj/item/clothing/shirt/dress/royal/prince,
+/obj/item/clothing/armor/leather/jacket/handjacket,
+/obj/item/clothing/cloak/cape/blkknight,
+/obj/item/clothing/head/fancyhat,
 /turf/open/floor/blocks/paving,
 /area/rogue/indoors/vampire_manor)
 "ob" = (
@@ -2688,6 +2718,20 @@
 "oB" = (
 /turf/open/floor/churchbrick,
 /area/overlord_lair)
+"oD" = (
+/obj/machinery/light/fueled/wallfire/candle/weak/l,
+/obj/structure/closet/crate/crafted_closet/inn,
+/obj/item/clothing/shirt/dress/gown,
+/obj/item/clothing/shirt/dress/gown/fallgown,
+/obj/item/clothing/shirt/dress/gown/summergown,
+/obj/item/clothing/shirt/dress/gown/wintergown,
+/obj/item/clothing/armor/gambeson/heavy/dress,
+/obj/item/clothing/armor/gambeson/heavy/winterdress,
+/obj/item/clothing/shirt/dress/silkdress/colored/random,
+/obj/item/clothing/armor/leather/vest/winterjacket,
+/obj/item/clothing/shirt/dress/royal/princess,
+/turf/open/floor/herringbone,
+/area/rogue/indoors/vampire_manor)
 "oE" = (
 /obj/structure/table/wood/nice/decorated_alt,
 /obj/item/reagent_containers/glass/cup/wooden{
@@ -2826,6 +2870,7 @@
 /obj/item/clothing/shirt/rags,
 /obj/item/clothing/shirt/rags,
 /obj/item/clothing/shirt/rags,
+/obj/item/soap/bath,
 /turf/open/floor/blocks/paving/vert,
 /area/rogue/indoors/vampire_manor)
 "pQ" = (
@@ -2848,6 +2893,7 @@
 "qb" = (
 /obj/structure/rack,
 /obj/item/weapon/sword/iron,
+/obj/item/weapon/knife/dagger,
 /turf/open/floor/hexstone,
 /area/rogue/indoors/vampire_manor)
 "qc" = (
@@ -6099,6 +6145,12 @@
 "Mk" = (
 /obj/structure/mannequin/male,
 /obj/structure/fluff/walldeco/maidendrape,
+/obj/item/clothing/gloves/angle/grenzel,
+/obj/item/clothing/head/helmet/skullcap/grenzelhoft,
+/obj/item/clothing/pants/grenzelpants,
+/obj/item/clothing/shirt/grenzelhoft,
+/obj/item/clothing/shoes/rare/grenzelhoft,
+/obj/item/clothing/neck/psycross/g,
 /turf/open/floor/herringbone,
 /area/rogue/indoors/vampire_manor)
 "Mm" = (
@@ -6159,26 +6211,10 @@
 /turf/open/floor/grass,
 /area/rogue/outdoors/woods_safe)
 "ME" = (
-/obj/structure/closet/crate/crafted_closet/inn,
-/obj/item/clothing/armor/leather/jacket/hand,
-/obj/item/clothing/armor/leather/jacket/leathercoat/black,
-/obj/item/clothing/shirt/grenzelhoft,
-/obj/item/clothing/shirt/tunic/noblecoat,
-/obj/item/clothing/shirt/undershirt/fancy,
-/obj/item/clothing/head/fancyhat,
-/obj/item/clothing/pants/grenzelpants,
-/obj/item/clothing/shoes/boots,
-/obj/item/clothing/shoes/nobleboot,
-/obj/item/clothing/head/helmet/skullcap/grenzelhoft,
-/obj/item/clothing/cloak/cape,
-/obj/item/clothing/cloak/raincloak/furcloak,
-/obj/item/clothing/shirt/tunic/colored/black,
-/obj/item/clothing/gloves/angle/grenzel,
-/obj/item/clothing/gloves/angle,
-/obj/item/clothing/shirt/dress/silkdress/colored/black,
-/obj/item/clothing/armor/gambeson/heavy/winterdress,
-/obj/item/clothing/armor/gambeson/heavy/dress,
-/obj/item/storage/belt/leather,
+/obj/structure/closet/crate/chest/crate,
+/obj/item/reagent_containers/glass/bottle/healthpot,
+/obj/item/reagent_containers/glass/bottle/healthpot,
+/obj/item/reagent_containers/glass/bottle/healthpot,
 /turf/open/floor/carpet,
 /area/rogue/indoors/vampire_manor)
 "MF" = (
@@ -6323,6 +6359,9 @@
 /obj/item/clothing/armor/gambeson/light{
 	pixel_x = 5
 	},
+/obj/item/clothing/armor/leather/vest,
+/obj/item/clothing/cloak/raincloak/colored/red,
+/obj/item/clothing/cloak/raincloak/furcloak,
 /turf/open/floor/herringbone,
 /area/rogue/indoors/vampire_manor)
 "NC" = (
@@ -7279,6 +7318,7 @@
 /obj/structure/rack,
 /obj/item/weapon/mace,
 /obj/item/weapon/polearm/spear,
+/obj/item/weapon/flail,
 /turf/open/floor/hexstone,
 /area/rogue/indoors/vampire_manor)
 "TM" = (
@@ -7300,6 +7340,19 @@
 	},
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors)
+"TP" = (
+/obj/structure/mannequin/male,
+/obj/structure/fluff/walldeco/maidendrape,
+/obj/item/clothing/face/phys,
+/obj/item/clothing/head/roguehood/phys,
+/obj/item/clothing/shoes/boots/leather,
+/obj/item/clothing/shirt/undershirt/colored/black,
+/obj/item/clothing/pants/tights/colored/random,
+/obj/item/clothing/shirt/robe/phys,
+/obj/item/clothing/neck/phys,
+/obj/item/clothing/gloves/leather/phys,
+/turf/open/floor/herringbone,
+/area/rogue/indoors/vampire_manor)
 "TQ" = (
 /obj/structure/table/wood/treestump,
 /obj/item/grown/log/tree,
@@ -7881,6 +7934,18 @@
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/grass,
 /area/rogue/outdoors/woods_safe)
+"XW" = (
+/obj/structure/table/wood/fancy/red,
+/obj/item/clothing/face/jademask,
+/obj/item/clothing/face/coralmask,
+/obj/item/clothing/face/facemask/goldmask,
+/obj/item/clothing/face/facemask/steel,
+/obj/item/clothing/face/lordmask,
+/obj/item/clothing/face/rosemask,
+/obj/item/clothing/face/shellmask,
+/obj/item/clothing/face/shepherd/clothmask,
+/turf/open/floor/blocks/paving,
+/area/rogue/indoors/vampire_manor)
 "XZ" = (
 /obj/item/weapon/sword/iron,
 /obj/item/weapon/sword/iron,
@@ -14811,7 +14876,7 @@ jZ
 jZ
 HC
 ct
-dU
+ip
 cT
 cT
 Zl
@@ -14941,7 +15006,7 @@ uT
 jZ
 Pn
 yE
-Mk
+TP
 cI
 Zl
 Io
@@ -16240,8 +16305,8 @@ yE
 vE
 CP
 ca
-ca
-lo
+oD
+XW
 nZ
 yE
 ze

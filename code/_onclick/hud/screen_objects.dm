@@ -24,7 +24,7 @@
 		return
 	set_new_hud(hud_owner)
 
-/atom/movable/screen/Destroy()
+/atom/movable/screen/Destroy(force)
 	master_ref = null
 	hud = null
 	return ..()
