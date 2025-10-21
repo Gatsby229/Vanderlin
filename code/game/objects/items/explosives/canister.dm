@@ -41,4 +41,4 @@
 
 	shrapnel_type = /obj/projectile/bullet/shrap
 	shrapnel_radius = 7
-    det_time = 10 SECONDS
+	det_time = 10 SECONDS
