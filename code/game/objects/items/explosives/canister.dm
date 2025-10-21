@@ -40,4 +40,4 @@
 	ex_flame = 1
 
 	shrapnel_type = /obj/projectile/bullet/shrap
-	shrapnel_radius = 8
+	shrapnel_radius = 7
