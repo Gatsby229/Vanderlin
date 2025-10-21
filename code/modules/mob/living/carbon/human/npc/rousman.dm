@@ -142,8 +142,8 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 	dam_icon_m = null
 	damage_overlay_type = ""
 	changesource_flags = WABBAJACK
-	exotic_bloodtype = /datum/blood_type/human/rousman
 	var/raceicon = "rousman"
+	exotic_bloodtype = /datum/blood_type/human/corrupted/rousman
 
 /datum/species/rousman/update_damage_overlays(mob/living/carbon/human/H)
 	return

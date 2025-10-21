@@ -149,7 +149,27 @@
 	created_item = /obj/item/clothing/ring/silver
 	createditem_extra = 2
 
-/datum/anvil_recipe/valuables/silver/bracelet
+/datum/anvil_recipe/valuables/silver/diadem
+	name = "Silver Diadem"
+	recipe_name = "a Silver Diadem"
+	created_item = /obj/item/clothing/head/crown/circlet/silverdiadem
+
+/datum/anvil_recipe/valuables/silver/nosechain
+	name = "2x Silver Nosechain's"
+	recipe_name = "two Silver Nosechains"
+	created_item = /obj/item/clothing/face/facemask/silvernosechain
+	createditem_extra = 1
+/datum/anvil_recipe/valuables/silver/faceveil
+	name = "Silver Face Veil"
+	recipe_name = "a Silver Veil"
+	created_item = /obj/item/clothing/face/facemask/silverveil
+
+/datum/anvil_recipe/valuables/silver/headdress
+	name = "Ziliquae Headdress"
+	recipe_name = "a Ziliquae Headdress"
+	created_item = /obj/item/clothing/head/crown/circlet/silverheaddress
+
+/datum/anvil_recipe/valuables/silver/sbracelet
 	name = "2x Silver Bracelets"
 	recipe_name = "two Silver Bracelets"
 	created_item = /obj/item/clothing/wrists/silverbracelet
@@ -322,6 +342,33 @@
 	recipe_name = "three Rings" // For the Elven kings under the sky...
 	created_item = /obj/item/clothing/ring/gold
 	createditem_extra = 2
+
+/datum/anvil_recipe/valuables/gold/diadem
+	name = "Gold Diadem"
+	recipe_name = "a Gold Diadem"
+	created_item = /obj/item/clothing/head/crown/circlet/golddiadem
+
+/datum/anvil_recipe/valuables/gold/nosechain
+	name = "2x Gold Nosechain's"
+	recipe_name = "two Silver Nosechains"
+	created_item = /obj/item/clothing/face/facemask/goldnosechain
+	createditem_extra = 1
+
+/datum/anvil_recipe/valuables/gold/faceveil
+	name = "Golden Face Veil"
+	recipe_name = "a Golden Veil"
+	created_item = /obj/item/clothing/face/facemask/goldveil
+
+/datum/anvil_recipe/valuables/gold/headdress
+	name = "Zenarii Headdress"
+	recipe_name = "a Zenarii Headdress"
+	created_item = /obj/item/clothing/head/crown/circlet/goldheaddress
+
+/datum/anvil_recipe/valuables/gold/hemhem
+	name = "Hemhem Crown (+ Cloth )"
+	recipe_name = "a Hemhem Crown"
+	additional_items = list (/obj/item/natural/cloth)
+	created_item = /obj/item/clothing/head/crown/hemhem
 
 /datum/anvil_recipe/valuables/gold/dorpel
 	name = "Golden Dorpel Ring"

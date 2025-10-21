@@ -199,30 +199,24 @@
 	dreamer.client?.images -= fake_floor
 
 /proc/handle_maniac_admin_bwoink_hallucination(mob/living/target)
-	var/fakemin = "Trey Liam"
-	if(length(GLOB.admin_datums))
-		var/datum/admins/badmin = GLOB.admin_datums[pick(GLOB.admin_datums)]
-		if(badmin?.owner?.key)
-			fakemin = badmin.owner.key
+	var/datum/admins/badmin = GLOB.admin_datums[pick(GLOB.admin_datums)]
+	var/fakemin = badmin?.owner?.key || "Trey Liam"
 	var/message = ""
 	message = pick_list_replacements("maniac.json", "dreamer_ahelp")
 	to_chat(target, "<font color='red' size='4'><b>-- Administrator private message --</b></font>")
-	to_chat(target, span_adminsay("Admin PM from-<b><span style='color: #0b4990;'>[fakemin]</span></b>: [message]"))
-	to_chat(target, span_adminsay("<i>Click on the administrator's name to [pick("die", "WAKE UP")].</i>"))
+	to_chat(target, span_adminsay("Admin PM from-<b><span style='color: #0000EE; text-decoration: underline;'>[fakemin]</span></b>: [message]"))
+	to_chat(target, span_adminsay("<i>Click on the administrator's name to [pick("DIE", "CRY", "RISE", "WAKE UP")].</i>"))
 	SEND_SOUND(target, sound('sound/adminhelp.ogg'))
 
 /proc/handle_maniac_admin_ban_hallucination(mob/living/target)
-	var/fakemin = "Trey Liam"
-	if(length(GLOB.admin_datums))
-		var/datum/admins/badmin = GLOB.admin_datums[pick(GLOB.admin_datums)]
-		if(badmin?.owner?.key)
-			fakemin = badmin.owner.key
+	var/datum/admins/badmin = GLOB.admin_datums[pick(GLOB.admin_datums)]
+	var/fakemin = badmin?.owner?.key || "Trey Liam"
 	var/message = ""
-	var/ban_appeal = pick("your grave", "WAKE UP WAKE UP WAKE UP")
+	var/ban_appeal = pick("your grave", "WAKE UP WAKE UP WAKE UP", "cry a river", "bed and wake up")
 	message = pick_list_replacements("maniac.json", "dreamer_ban")
 	to_chat(target, span_boldannounce("<BIG>You have been banned by [fakemin] from the server.\nReason: [message]</BIG>"))
 	to_chat(target, span_boldannounce("This is a permanent ban. The round ID is [GLOB.rogue_round_id]."))
-	to_chat(target, span_boldannounce("To appeal this ban go to <span style='color: #0099cc;'>[ban_appeal].</span>"))
+	to_chat(target, span_boldannounce("To appeal this ban go to <span style='color: #0000EE;'>[ban_appeal].</span>"))
 	to_chat(target, "<div class='connectionClosed internal'>You are either AFK, experiencing lag or the connection has closed.</div>")
 	SEND_SOUND(target, sound(null))
 

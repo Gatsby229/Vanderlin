@@ -703,5 +703,22 @@
                 "balance": "essence precursors were completely changed"
             }
         ]
+    },
+    "2025-10-20": {
+        "SpeebusDaGeebus": [
+            {
+                "rscadd": "Consort Crown to Queen's Retreat"
+            },
+            {
+                "rscdel": "Surplus Crown"
+            }
+        ]
+    },
+    "2025-10-21": {
+        "snowyseshi": [
+            {
+                "map": "added various items to the vampire lord manor"
+            }
+        ]
     }
 }

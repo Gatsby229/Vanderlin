@@ -645,6 +645,11 @@
 	stress_change = 50
 	timer = 1000 MINUTES
 
+/datum/stress_event/consumed_tainted_lux
+	desc = span_warning("Why did i drink that?")
+	stress_change = 15
+	timer = 10 MINUTES
+  
 /datum/stress_event/dead_bird
 	timer = 5 MINUTES
 	stress_change = 3

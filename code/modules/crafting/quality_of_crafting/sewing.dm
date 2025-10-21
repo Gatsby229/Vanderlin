@@ -434,6 +434,15 @@
 	craftdiff = 2
 	category = "Cloak"
 
+/datum/repeatable_crafting_recipe/sewing/poncho
+	name = "cloth poncho"
+	output = /obj/item/clothing/cloak/poncho
+	requirements = list(
+		/obj/item/natural/cloth = 2,
+		/obj/item/natural/fibers = 1,)
+	craftdiff = 2
+	category = "Cloak"
+
 /datum/repeatable_crafting_recipe/sewing/tabard/crusader
 	name = "tabard (crusader)"
 	output = /obj/item/clothing/cloak/tabard/crusader

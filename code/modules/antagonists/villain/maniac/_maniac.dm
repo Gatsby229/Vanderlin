@@ -201,6 +201,8 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 	for(var/trait in final_traits)
 		ADD_TRAIT(dreamer, trait, "[type]")
 	waking_up = TRUE
+	sleep(10 SECONDS)
+	dreamer.clear_fullscreen("wakeup")
 
 /datum/antagonist/maniac/proc/spawn_trey_liam()
 	var/turf/spawnturf
@@ -243,7 +245,6 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 	// var/client/dreamer_client = dreamer.client // Trust me, we need it later
 	to_chat(dreamer, "...It couldn't be.")
 	dreamer.clear_fullscreen("dream")
-	dreamer.clear_fullscreen("wakeup")
 	var/client/client = dreamer?.client
 	if(client) //clear screenshake animation
 		animate(client, dreamer.pixel_y)
@@ -291,28 +292,33 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 			sleep(3 SECONDS)
 		to_chat(trey_liam, span_big(span_deadsay("I have to go back, I have to go back, I have to go back to Vanderlin.")))
 	else
-		INVOKE_ASYNC(src, PROC_REF(cant_wake_up), dreamer)
+		INVOKE_ASYNC(src, GLOBAL_PROC_REF(cant_wake_up), dreamer)
 		cull_competitors(dreamer)
 	// sleep(15 SECONDS)
 	// to_chat(world, span_deadsay("<span class='reallybig'>The Maniac has TRIUMPHED!</span>"))
 	// SSticker.declare_completion()
 
-/datum/antagonist/maniac/proc/cant_wake_up(mob/living/dreamer)
-	if(!iscarbon(dreamer))
+/proc/cant_wake_up(mob/living/target)
+	if(!iscarbon(target))
 		return
-	to_chat(dreamer, span_deadsay("<span class='reallybig'>I CAN'T WAKE UP.</span>"))
+	ADD_TRAIT(target, TRAIT_SHAKY_SPEECH, TRAIT_GENERIC)
+	target.Knockdown(10 SECONDS)
+	to_chat(target, span_deadsay("<span class='reallybig'>I CAN'T WAKE UP.</span>"))
+	target.say("I CAN'T WAKE UP!", spans = list("reallybig"), ignore_spam = TRUE)
 	sleep(2 SECONDS)
 	for(var/i in 1 to 10)
-		to_chat(dreamer, span_deadsay("<span class='reallybig'>ICANTWAKEUP</span>"))
+		to_chat(target, span_deadsay("<span class='reallybig'>ICANTWAKEUP</span>"))
+		target.say("ICANTWAKEUP!!", spans = list("reallybig"), ignore_spam = TRUE)
 		sleep(0.5 SECONDS)
-	var/obj/item/organ/brain/brain = dreamer.getorganslot(ORGAN_SLOT_BRAIN)
-	var/obj/item/bodypart/head/head = dreamer.get_bodypart(BODY_ZONE_HEAD)
+	var/obj/item/organ/brain/brain = target.getorganslot(ORGAN_SLOT_BRAIN)
+	var/obj/item/bodypart/head/head = target.get_bodypart(BODY_ZONE_HEAD)
 	if(head)
 		head.dismember(BURN)
 		if(!QDELETED(head))
 			qdel(head)
 	if(brain)
 		qdel(brain)
+	target.gib()
 
 // Culls any living maniacs in the world apart from the victor.
 /datum/antagonist/maniac/proc/cull_competitors(mob/living/carbon/victor)
@@ -335,7 +341,7 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 			sleep(2 SECONDS)
 			to_chat(C, span_userdanger("How can I be TOO LATE-"))
 			sleep(1 SECONDS)
-			INVOKE_ASYNC(src, PROC_REF(cant_wake_up), C)
+			INVOKE_ASYNC(src, GLOBAL_PROC_REF(cant_wake_up), C)
 			QDEL_LIST(competitor.wonders_made)
 			competitor.wonders_made = null
 

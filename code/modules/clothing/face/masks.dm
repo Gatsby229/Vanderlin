@@ -44,6 +44,82 @@
 	melting_material = /datum/material/iron
 	melt_amount = 50
 
+/obj/item/clothing/face/facemask/goldnosechain
+	name = "gold nosechain"
+	icon_state = "nosechain_g"
+	desc = "A fashionable nose chain with two rings, It's design originated from the Savannah Elf tribes."
+	max_integrity = 100
+	blocksound = FALSE
+	armor = FALSE
+	prevent_crits = FALSE
+	flags_inv = FALSE
+	body_parts_covered = FACE
+	block2add = FALSE
+	slot_flags = ITEM_SLOT_MASK
+	sewrepair = FALSE
+	anvilrepair = /datum/skill/craft/armorsmithing
+	clothing_flags = FALSE
+	sellprice = VALUE_GOLD_ITEM
+
+/obj/item/clothing/face/facemask/silvernosechain
+	name = "silver nosechain"
+	icon_state = "nosechain_s"
+	desc = "A fashionable nose chain with two rings, It's design originated from the Savannah Elf tribes."
+	max_integrity = 100
+	blocksound = FALSE
+	armor = FALSE
+	prevent_crits = FALSE
+	flags_inv = FALSE
+	body_parts_covered = FACE
+	block2add = FALSE
+	slot_flags = ITEM_SLOT_MASK
+	sewrepair = FALSE
+	anvilrepair = /datum/skill/craft/armorsmithing
+	clothing_flags = FALSE
+	sellprice = VALUE_SILVER_ITEM
+
+/obj/item/clothing/face/facemask/silvernosechain/Initialize()
+	. = ..()
+	enchant(/datum/enchantment/silver)
+
+/obj/item/clothing/face/facemask/goldveil
+	name = "golden face veil"
+	icon_state = "veil_g"
+	desc = "A veil made out of golden chains."
+	max_integrity = 100
+	blocksound = FALSE
+	armor = FALSE
+	prevent_crits = FALSE
+	flags_inv = HIDEFACE
+	body_parts_covered = FACE
+	block2add = FALSE
+	slot_flags = ITEM_SLOT_MASK
+	sewrepair = FALSE
+	anvilrepair = /datum/skill/craft/armorsmithing
+	clothing_flags = FALSE
+	sellprice = VALUE_GOLD_ITEM
+
+/obj/item/clothing/face/facemask/silverveil
+	name = "silver face veil"
+	icon_state = "veil_s"
+	desc = "A veil made out of silver chains."
+	max_integrity = 100
+	blocksound = FALSE
+	armor = FALSE
+	prevent_crits = FALSE
+	flags_inv = HIDEFACE
+	body_parts_covered = FACE
+	block2add = FALSE
+	slot_flags = ITEM_SLOT_MASK
+	sewrepair = FALSE
+	anvilrepair = /datum/skill/craft/armorsmithing
+	clothing_flags = FALSE
+	sellprice = VALUE_SILVER_ITEM
+
+/obj/item/clothing/face/facemask/silverveil/Initialize()
+	. = ..()
+	enchant(/datum/enchantment/silver)
+
 /obj/item/clothing/face/jademask
 	name = "joapstone mask "
 	icon_state = "mask_jade"

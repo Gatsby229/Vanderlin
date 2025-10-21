@@ -158,6 +158,7 @@
 	damage_overlay_type = "human"
 	changesource_flags = WABBAJACK
 	var/raceicon = "zizombie"
+	exotic_bloodtype = /datum/blood_type/human/corrupted/zizombie
 
 /datum/species/zizombie/update_damage_overlays(mob/living/carbon/human/H)
 	return
