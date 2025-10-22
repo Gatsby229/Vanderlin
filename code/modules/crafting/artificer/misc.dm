@@ -280,6 +280,14 @@
 	hammers_per_item = 10
 	craftdiff = 6
 
+/datum/artificer_recipe/contraptions/grenade_shell
+	name = "2x Grenade shells"
+	hammers_per_item = 2
+	created_item = /obj/item/ammo_casing/caseless/grenadeshell
+	required_item = /obj/item/ingot/tin
+	craftdiff = 2
+	created_amount = 2
+
 // --------- Ammo -----------
 
 /datum/artificer_recipe/ammo
@@ -301,14 +309,6 @@
 	required_item = /obj/item/ingot/tin
 	craftdiff = 2
 	created_amount = 4
-
-	/datum/artificer_recipe/ammo/grenade_shell
-	name = "2x Grenade shells"
-	hammers_per_item = 2
-	created_item = /obj/item/ammo_casing/caseless/grenadeshell
-	required_item = /obj/item/ingot/tin
-	craftdiff = 2
-	created_amount = 2
 
 /datum/artificer_recipe/ammo/bolts
 	name = "Crossbow Bolts 5x (+1 Iron)"
