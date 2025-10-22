@@ -75,7 +75,7 @@
 	requirements = list(
 		/obj/item/natural/fibers = 1,
 		/obj/item/reagent_containers/powder/blastpowder = 2,
-		/obj/item/explosive/grenadeshell = 1,
+		/obj/item/ammo_casing/caseless/grenadeshell = 1,
 		/obj/item/ammo_casing/caseless/bullet = 8,
 	)
 

@@ -304,8 +304,8 @@
 
 	/datum/artificer_recipe/ammo/grenade_shell
 	name = "2x Grenade shells"
-	hammers_per_item = 4
-	created_item = /obj/item/explosive/grenadeshell
+	hammers_per_item = 2
+	created_item = /obj/item/ammo_casing/caseless/grenadeshell
 	required_item = /obj/item/ingot/tin
 	craftdiff = 2
 	created_amount = 2
