@@ -69,6 +69,7 @@
 	craft_time = 1 SECONDS
 	subtypes_allowed = TRUE
 	reagent_subtypes_allowed = TRUE
+
 /datum/repeatable_crafting_recipe/bomb/canister_bomb
 	name = "Canister Grenade"
 
