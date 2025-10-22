@@ -4,7 +4,6 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_PLAYER_GRENZ
 	outfit = /datum/outfit/wretch/vigilante
-	category_tags = list(CTAG_WRETCH)
 	total_positions = 1 //There can be only one.
 	roll_chance = 25
 

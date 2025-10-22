@@ -38,7 +38,7 @@
 	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/cooking, 4, TRUE)
 	H.add_spell(/datum/action/cooldown/spell/vicious_mockery)
-
+	H.add_spell(/datum/action/cooldown/spell/bardic_inspiration)
 	H.adjust_blindness(-3)
 	var/instruments = list(
 		"Harp" = /obj/item/instrument/harp,

@@ -801,9 +801,6 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 
 #define FOR_DVIEW_END GLOB.dview_mob.loc = null
 
-
-#define UNTIL(X) while(!(X)) stoplag()
-
 /proc/get_mob_or_brainmob(occupant)
 	var/mob/living/mob_occupant
 

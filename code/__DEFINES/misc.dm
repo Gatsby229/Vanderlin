@@ -183,14 +183,6 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define POLLTYPE_MULTI		"MULTICHOICE"
 #define POLLTYPE_IRV		"IRV"
 
-
-
-//subtypesof(), typesof() without the parent path
-#define subtypesof(typepath) ( typesof(typepath) - typepath )
-
-/// Takes a datum as input, returns its ref string
-#define text_ref(datum) ref(datum)
-
 //Gets the turf this atom inhabits
 #define get_turf(A) (get_step(A, 0))
 

@@ -223,6 +223,27 @@
 		if(HAS_TRAIT(src, TRAIT_LEPROSY))
 			. += span_necrosis("A LEPER...")
 
+		if(HAS_TRAIT(user, TRAIT_ROYALSERVANT))
+			if(length(culinary_preferences) && family_datum == SSfamilytree.ruling_family)
+				var/obj/item/reagent_containers/food/snacks/fav_food = src.culinary_preferences[CULINARY_FAVOURITE_FOOD]
+				var/datum/reagent/consumable/fav_drink = src.culinary_preferences[CULINARY_FAVOURITE_DRINK]
+				if(fav_food)
+					if(fav_drink)
+						. += span_notice("Their favourites are [fav_food.name] and [fav_drink.name].")
+					else
+						. += span_notice("Their favourite is [fav_food.name].")
+				else if(fav_drink)
+					. += span_notice("Their favourite is [fav_drink.name].")
+				var/obj/item/reagent_containers/food/snacks/hated_food = src.culinary_preferences[CULINARY_HATED_FOOD]
+				var/datum/reagent/consumable/hated_drink = src.culinary_preferences[CULINARY_HATED_DRINK]
+				if(hated_food)
+					if(hated_drink)
+						. += span_notice("They hate [hated_food.name] and [hated_drink.name].")
+					else
+						. += span_notice("They hate [hated_food.name].")
+				else if(hated_drink)
+					. += span_notice("They hate [hated_drink.name].")
+
 	if(HAS_TRAIT(src, TRAIT_MANIAC_AWOKEN))
 		. += span_userdanger("MANIAC!")
 

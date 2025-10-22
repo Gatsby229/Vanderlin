@@ -12,7 +12,10 @@
 	min_pq = 8
 	bypass_lastclass = TRUE
 
-	allowed_races = RACES_PLAYER_NONDISCRIMINATED
+// Medicators and Tritons are hallowed in the eyes of the Ten, no matter how much Astrata dislikes it, Harpies do not get to be templars because they literally cannot wear plate armour nor lift their weapons.
+	allowed_races = RACES_TEMPLAR
+
+
 	allowed_patrons = ALL_TEMPLAR_PATRONS
 
 	outfit = /datum/outfit/templar

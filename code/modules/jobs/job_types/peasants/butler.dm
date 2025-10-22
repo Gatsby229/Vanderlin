@@ -16,17 +16,7 @@
 	bypass_lastclass = TRUE
 
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
-	allowed_races = list(\
-		SPEC_ID_HUMEN,\
-		SPEC_ID_ELF,\
-		SPEC_ID_HALF_ELF,\
-		SPEC_ID_DWARF,\
-		SPEC_ID_DROW,\
-		SPEC_ID_HALF_DROW,\
-		SPEC_ID_TIEFLING,\
-		SPEC_ID_AASIMAR,\
-		SPEC_ID_HARPY,\
-	)
+	allowed_races = RACES_BUTLER
 
 	outfit = /datum/outfit/butler
 	give_bank_account = 30 // Along with the pouch, enough to purchase some ingredients from the farm and give hard working servants a silver here and there. Still need the assistance of the crown's coffers to do anything significant
@@ -61,6 +51,7 @@
 	H.change_stat(STATKEY_PER, 1)
 	H.change_stat(STATKEY_END, 1)
 	ADD_TRAIT(H, TRAIT_KNOWKEEPPLANS, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ROYALSERVANT, TRAIT_GENERIC)
 	backpack_contents = list(/obj/item/recipe_book/cooking = 1)
 
 	if(H.gender == MALE)

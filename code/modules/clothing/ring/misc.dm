@@ -416,3 +416,10 @@
 		active_item = FALSE
 	return
 
+
+// ................... The Feldsher's ring .......................
+
+/obj/item/clothing/ring/feldsher_ring
+	name = "feldsher's ring"
+	icon_state = "ring_feldsher"
+	desc = "A hallowed copper ring, ritualistically forged by Pestran clergymen upon the graduation of a feldsher. \n It bears a vulture skull, whose beak is crooked, and the copper was blessed with pestra's rot : it will corrode in time, yet never lose it's resilience. \n Although the wearer may not have Pestra as her patron, this ring is proof of Her blessing. This allows the feldsher to extract and manipulate Lux, so long as they follow Her teachings"

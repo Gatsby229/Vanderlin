@@ -720,5 +720,62 @@
                 "map": "added various items to the vampire lord manor"
             }
         ]
+    },
+    "2025-10-22": {
+        "wgtjunior743": [
+            {
+                "bugfix": "Steward pay by class not working for some jobs"
+            },
+            {
+                "bugfix": "Monarch Change Position not giving female titles for those who are females."
+            },
+            {
+                "bugfix": "Hand(besides the Hand class) and Consort not getting their extra vote weight"
+            },
+            {
+                "bugfix": "a job related family tree bug"
+            },
+            {
+                "bugfix": "Garrision recruit and other \\\"fake\\\" jobs titles appearing as Unknown."
+            }
+        ],
+        "AnDigitalGondola": [
+            {
+                "balance": "Gave werewolves brushwalking."
+            },
+            {
+                "balance": "Getting pulled across a meagre bush will not immobilize mobs."
+            }
+        ],
+        "Arkatos": [
+            {
+                "rscadd": "Lux offerings to the Matthios idol now count towards overall bandit contributions and are triumph capped together with them."
+            },
+            {
+                "rscdel": "Deleted triumph loss from seeing your spouse die, resisting conversions and returning to lobby from assasins's dagger."
+            },
+            {
+                "bugfix": "Honor duels now reward victories properly."
+            },
+            {
+                "bugfix": "Dendor task \\\"Butcher animals\\\" now works properly."
+            },
+            {
+                "bugfix": "Fixed a case where notable people were not assigned properly."
+            }
+        ],
+        "7erracotta": [
+            {
+                "rscadd": "added ponchos"
+            },
+            {
+                "rscadd": "Added new jewelry and their crafting recipes"
+            }
+        ],
+        "SarmentiCampbell": [
+            {
+                "balance": "Some Minor Maniac Hallucination/graggazo changes"
+            }
+        ]
     }
 }

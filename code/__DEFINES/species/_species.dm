@@ -210,14 +210,32 @@
 	SPEC_ID_DWARF,\
 )
 
-#define RACES_PLAYER_COURT_PHYSICIAN list(\
-	SPEC_ID_HUMEN,\
-	SPEC_ID_DWARF,\
-	SPEC_ID_AASIMAR,\
-	SPEC_ID_ELF,\
-	SPEC_ID_HALF_ELF,\
-	SPEC_ID_MEDICATOR,\
-)
+/// The butler
+
+#define RACES_BUTLER list(\
+		SPEC_ID_HUMEN,\
+		SPEC_ID_ELF,\
+		SPEC_ID_HALF_ELF,\
+		SPEC_ID_DWARF,\
+		SPEC_ID_DROW,\
+		SPEC_ID_HALF_DROW,\
+		SPEC_ID_TIEFLING,\
+		SPEC_ID_AASIMAR,\
+		SPEC_ID_HARPY,\
+		SPEC_ID_MEDICATOR,\
+		SPEC_ID_TRITON,\
+	)
+
+/// The tennite temple's paladins - Hallowed species excluding Harpies due to their inability to wear plate
+#define RACES_TEMPLAR list(\
+		SPEC_ID_HUMEN,\
+		SPEC_ID_ELF,\
+		SPEC_ID_HALF_ELF,\
+		SPEC_ID_DWARF,\
+		SPEC_ID_AASIMAR,\
+		SPEC_ID_MEDICATOR,\
+		SPEC_ID_TRITON,\
+	)
 
 /// Foreigner Nobility Species - No Tiefling (you know why) or hollow-kin or medicators (too young to have nobles mayhaps)
 #define RACES_PLAYER_FOREIGNNOBLE list(\

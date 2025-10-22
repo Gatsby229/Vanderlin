@@ -34,3 +34,7 @@
 		GLOB.outlawed_players += H.real_name
 	else
 		GLOB.excommunicated_players += H.real_name
+
+/datum/job/advclass/wretch
+	abstract_type = /datum/job/advclass/wretch
+	category_tags = list(CTAG_WRETCH)

@@ -355,36 +355,37 @@ GLOBAL_VAR_INIT(mobids, 1)
  * reset_perspective() set eye to common default : mob on turf, loc otherwise
  * reset_perspective(thing) set the eye to the thing (if it's equal to current default reset to mob perspective)
  */
-/mob/proc/reset_perspective(atom/A,atom/B)
-	if(client)
-		if(A)
-			if(ismovableatom(A))
-				//Set the the thing unless it's us
-				if(A != src)
-					client.perspective = EYE_PERSPECTIVE
-					client.eye = A
-				else
-					client.eye = client.mob
-					client.perspective = MOB_PERSPECTIVE
-			else if(isturf(A))
-				//Set to the turf unless it's our current turf
-				if(A != loc)
-					client.perspective = EYE_PERSPECTIVE
-					client.eye = A
-				else
-					client.eye = client.mob
-					client.perspective = MOB_PERSPECTIVE
-			else
-				//Do nothing
+/mob/proc/reset_perspective(atom/new_perspective)
+	if(!client)
+		return
+
+	if(!new_perspective)
+		if(isturf(loc))
+			client.eye = client.mob
+			client.perspective = MOB_PERSPECTIVE
 		else
-			//Reset to common defaults: mob if on turf, otherwise current loc
-			if(isturf(loc))
-				client.eye = client.mob
-				client.perspective = MOB_PERSPECTIVE
-			else
-				client.perspective = EYE_PERSPECTIVE
-				client.eye = loc
-		return 1
+			client.perspective = EYE_PERSPECTIVE
+			client.eye = loc
+		return
+
+	if(ismovableatom(new_perspective))
+		//Set the the thing unless it's us
+		if(new_perspective != src)
+			client.perspective = EYE_PERSPECTIVE
+			client.eye = new_perspective
+		else
+			client.eye = client.mob
+			client.perspective = MOB_PERSPECTIVE
+		return
+
+	if(isturf(new_perspective))
+		//Set to the turf unless it's our current turf
+		if(new_perspective != loc)
+			client.perspective = EYE_PERSPECTIVE
+			client.eye = new_perspective
+		else
+			client.eye = client.mob
+			client.perspective = MOB_PERSPECTIVE
 
 /// Show the mob's inventory to another mob
 /mob/proc/show_inv(mob/user)
@@ -425,7 +426,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 					observer_skill = 1
 				if(observer.rogue_sneaking)
 					observer_skill += 1
-				
+
 				// determine PER multiplier based on the target PER
 				var/multiplier = 5
 				if(target.STAPER < 5)
@@ -436,14 +437,14 @@ GLOBAL_VAR_INIT(mobids, 1)
 					multiplier = 6
 				else if(target.STAPER >= 15 && target.STAPER <= 20)
 					multiplier = 7
-			
+
 				// calculate probability to fail
 				var/probby = (target.STAPER * multiplier) - (observer_skill * 10)
-			
+
 				// clamp probability
 				probby = max(probby, 5)
 				probby = min(probby, 95)
-				
+
 				if(prob(probby))
 					to_chat(src, span_warning("[A] noticed me peeking!"))
 					to_chat(A, span_warning("[src] peeks at you!"))

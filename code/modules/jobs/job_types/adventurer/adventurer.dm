@@ -28,12 +28,9 @@ GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 	can_have_apprentices = FALSE
 	scales = TRUE
 
-/datum/outfit/adventurer // Reminder message
-	var/merc_ad = "<br><font color='#855b14'><span class='bold'>If I wanted to make mammons by selling my services, or completing quests, the Mercenary guild would be a good place to start.</span></font><br>"
-
-/datum/outfit/adventurer/post_equip(mob/living/carbon/human/H)
-	..()
-	to_chat(H, merc_ad)
+/datum/job/adventurer/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+	to_chat(spawned, "<br><font color='#855b14'><span class='bold'>If I wanted to make mammons by selling my services, or completing quests, the Mercenary guild would be a good place to start.</span></font><br>")
 
 /datum/job/adventurer/set_spawn_and_total_positions(count)
 	// Calculate the new spawn positions

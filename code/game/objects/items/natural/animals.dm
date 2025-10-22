@@ -88,7 +88,7 @@
 			headpricemin = floor(headpricemin * 0.75)
 			headpricemax = floor(headpricemax * 0.75)
 		if(1)
-			//nothing
+			EMPTY_BLOCK_GUARD
 		if(2)
 			sellprice = floor(sellprice * 1.25)
 			headpricemin = floor(headpricemin * 1.25)
