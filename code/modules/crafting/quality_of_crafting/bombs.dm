@@ -80,7 +80,7 @@
 	)
 
 	starting_atom = /obj/item/natural/fibers
-	attacked_atom = /obj/item/explosive/grenadeshell
+	attacked_atom = /obj/item/ammo_casing/caseless/grenadeshell
 	output = /obj/item/explosive/canister_bomb
 	craft_time = 11 SECONDS
 	craftdiff = 5
