@@ -84,7 +84,7 @@
 	attacked_atom = /obj/item/ammo_casing/caseless/grenadeshell
 	output = /obj/item/explosive/canister_bomb
 	craft_time = 11 SECONDS
-	craftdiff = 5
+	craftdiff = 4
 	subtypes_allowed = TRUE
 	reagent_subtypes_allowed = TRUE
 
