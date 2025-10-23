@@ -1,6 +1,7 @@
 /datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice
 	name = "Ultimate Sacrifice"
 	button_icon_state = "revive"
+	sound = null
 	has_visual_effects = FALSE
 	cast_range = 1
 
@@ -59,7 +60,7 @@
 
 	cast_on.revive(full_heal = TRUE, admin_revive = FALSE)
 
-	playsound(owner, 'sound/magic/churn.ogg', 100)
+	playsound(owner, 'sound/magic/churn.ogg', 80)
 	ADD_TRAIT(owner, TRAIT_NECRA_CURSE, "ravox_ritual")
 	owner.death()
 

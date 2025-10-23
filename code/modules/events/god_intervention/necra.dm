@@ -16,6 +16,8 @@
 			var/is_zombie = potential_zombie.mind?.has_antag_datum(/datum/antagonist/zombie)
 			if(!is_zombie)
 				continue
-			to_chat(potential_zombie, span_danger("An overwhelming power of Necra purifies your body and puts you to an eternal rest!"))
+			bordered_message(potential_zombie, list(
+				span_danger("An overwhelming power of Necra purifies your body and puts you to an eternal rest!")
+			))
 			potential_zombie.mind.remove_antag_datum(/datum/antagonist/zombie)
 			potential_zombie.death()

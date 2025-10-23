@@ -1,14 +1,15 @@
 /datum/objective/personal/marriage_broker
 	name = "Arrange Marriage"
 	category = "Eora's Chosen"
-	triumph_count = 2
-	immediate_effects = list("Gained an ability to conduct secret marriage ceremonies")
-	rewards = list("2 Triumphs", "Eora grows stronger")
+	triumph_count = 3
+	immediate_effects = list("Gained an ability to conduct secret marriage ceremonies", "Gained an ability to find marital status of others")
+	rewards = list("3 Triumphs", "Eora grows stronger")
 
 /datum/objective/personal/marriage_broker/on_creation()
 	. = ..()
 	if(owner?.current)
 		ADD_TRAIT(owner.current, TRAIT_SECRET_OFFICIANT, TRAIT_GENERIC)
+		owner.current.add_spell(/datum/action/cooldown/spell/detect_singles)
 	RegisterSignal(SSdcs, COMSIG_GLOBAL_MARRIAGE, PROC_REF(on_global_marriage))
 	update_explanation_text()
 

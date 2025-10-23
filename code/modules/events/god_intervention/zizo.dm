@@ -21,4 +21,7 @@
 			if(!zombie_datum)
 				continue
 			zombie_datum.wake_zombie()
-			to_chat(potential_zombie, span_danger("An overwhelming power of Zizo commands you! RISE AND RAVAGE!"))
+
+			bordered_message(potential_zombie, list(
+				span_danger("An overwhelming power of Zizo commands you! RISE AND RAVAGE!")
+			))

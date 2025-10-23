@@ -48,8 +48,10 @@
 	var/datum/objective/personal/release_fish/new_objective = new(owner = chosen_one.mind)
 	chosen_one.mind.add_personal_objective(new_objective)
 
-	to_chat(chosen_one, span_userdanger("YOU ARE ABYSSOR'S CHOSEN!"))
-	to_chat(chosen_one, span_notice("Abyssor demands respite for the creatures of the deep! Any rare fish returned to the water will please him!"))
+	bordered_message(chosen_one, list(
+		span_userdanger("YOU ARE ABYSSOR'S CHOSEN!"),
+		span_notice("Abyssor demands respite for the creatures of the deep! Any rare fish returned to the water will please him!"),
+	))
 	chosen_one.playsound_local(chosen_one, 'sound/items/bucket_transfer (2).ogg', 100)
 
 	chosen_one.mind.announce_personal_objectives()

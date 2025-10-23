@@ -2,7 +2,7 @@
 	name = "Consecrate Graves"
 	category = "Necra's Chosen"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Necra grows stronger", "You won't get sick from unpleasant smells anymore")
+	rewards = list("2 Triumphs", "Necra grows stronger", "You won't get sick from unpleasant smells")
 	var/burials_completed = 0
 	var/required_burials = 1
 

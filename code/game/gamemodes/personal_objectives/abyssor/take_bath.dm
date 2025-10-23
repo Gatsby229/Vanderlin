@@ -19,8 +19,6 @@
 	SIGNAL_HANDLER
 	if(completed)
 		return
-	if(!owner.current)
-		return
 
 	var/amulet_found = FALSE
 	for(var/obj/item/clothing/neck/current_item in owner.current.get_equipped_items(TRUE))
