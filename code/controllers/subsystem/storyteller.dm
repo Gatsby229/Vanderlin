@@ -1016,7 +1016,9 @@ SUBSYSTEM_DEF(gamemode)
 				var/next = 0
 				var/last_points = last_point_gains[track]
 				if(last_points)
-					next = round(((upper - lower) / last_points / STORYTELLER_WAIT_TIME))
+					var/points_per_second = last_points / (STORYTELLER_WAIT_TIME / 10)
+					if(points_per_second > 0)
+						next = round((upper - lower) / points_per_second)
 				dat += "<tr style='vertical-align:top; background-color: [background_cl];'>"
 				dat += "<td>[track] - [last_points] per process.</td>" //Track
 				dat += "<td>[percent]% ([lower]/[upper])</td>" //Progress

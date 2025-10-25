@@ -26,5 +26,7 @@
 		var/luck_roll = rand(-2, 4)
 		human_mob.set_stat_modifier("xylix_fortune", STATKEY_LCK, luck_roll)
 
-		to_chat(human_mob, span_biginfo("You have caught Xylix's attention and you can feel your fortune changing... Whether you'll laugh or weep about that later... well, that's part of the fun!"))
+		bordered_message(human_mob, list(
+			span_biginfo("You have caught Xylix's attention and you can feel your fortune changing... Whether you'll laugh or weep about it later... well, that's part of the fun!")
+		))
 		human_mob.playsound_local(human_mob, 'sound/misc/gods/xylix_omen_male_female.ogg', 100)

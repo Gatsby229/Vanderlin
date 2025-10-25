@@ -445,6 +445,7 @@
 		/datum/skill/labor/mining = 2,
 		/datum/skill/craft/smelting = 4,
 		/datum/skill/misc/reading = 2,
+		/datum/skill/craft/bombs= 4,
 	)
 
 	traits = list(TRAIT_SEEPRICES)

@@ -777,5 +777,83 @@
                 "balance": "Some Minor Maniac Hallucination/graggazo changes"
             }
         ]
+    },
+    "2025-10-23": {
+        "Somniworld": [
+            {
+                "rscadd": "Gave the Feldsher a ring denoting their ability to manipulate and extract lux legally. Stop lynching them, kthx."
+            },
+            {
+                "balance": "Tolerated inhumen species may now become butlers and court physicians."
+            },
+            {
+                "balance": "Tritons and medicators can now become Templars."
+            }
+        ],
+        "7erracotta": [
+            {
+                "rscadd": "Added new skin tones"
+            }
+        ],
+        "Arkatos": [
+            {
+                "rscadd": "Graggar's Culling god intervention event now uses personal objectives."
+            },
+            {
+                "rscadd": "Eora's Matchmaking god intervention event now uses personal objectives."
+            },
+            {
+                "qol": "Some important chat messages should be harder to miss."
+            }
+        ],
+        "wgtjunior743": [
+            {
+                "bugfix": "Sword Dancer now has bardic inspiration"
+            },
+            {
+                "bugfix": "Silver Amulet not protecting from transfix"
+            },
+            {
+                "bugfix": "Psycross / SIlver amulet not protecting from transfix besides the message."
+            }
+        ],
+        "snowyseshi": [
+            {
+                "bugfix": "fixed crimson fangs vampires not having infinite energy"
+            },
+            {
+                "rscadd": "Admin Spell: Arcane Bullet"
+            }
+        ],
+        "AnDigitalGondola": [
+            {
+                "balance": "Made beespider attacks and hand feeding add spiderhoney production."
+            },
+            {
+                "balance": "Flattened spiderhoney production values."
+            },
+            {
+                "rscadd": "Gave beespiders the ability to make webs after being fed consistently."
+            },
+            {
+                "rscadd": "Four new sub-types of honey made by apiaries favoring specific plants."
+            },
+            {
+                "image": "Three new sprites for mad honey, rouge honey, and moon honey."
+            },
+            {
+                "bugfix": "Made inserting a new bee queen give constructed apiaries a single bee to start building a hive."
+            }
+        ],
+        "DrSirKnight": [
+            {
+                "rscadd": "New trait for servants to show royal family likes and dislikes"
+            }
+        ],
+        "grungussuss": [
+            {
+                "rscadd": "puffer shot can be heard on the entire map"
+            }
+        ]
     }
 }

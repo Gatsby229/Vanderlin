@@ -20,7 +20,7 @@
 		UnregisterSignal(owner.current, COMSIG_ORGAN_CONSUMED)
 	return ..()
 
-/datum/objective/personal/consume_organs/proc/on_organ_consumed(datum/source, organ_type)
+/datum/objective/personal/consume_organs/proc/on_organ_consumed(datum/source, organ_type, obj/item/organ/organ_inside)
 	SIGNAL_HANDLER
 	if(completed)
 		return

@@ -9,6 +9,8 @@
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag =  "piercing"
 	speed = 0.8
+	reduce_crit_chance = 7
+
 /obj/item/ammo_casing/caseless/grenadeshell
 	name = "Grenade Shell"
 	desc = "A metal tube with a tight screw cap and slots for shrapnel."
