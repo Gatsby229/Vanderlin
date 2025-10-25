@@ -280,8 +280,8 @@
 	hammers_per_item = 10
 	craftdiff = 6
 
-/datum/artificer_recipe/contraptions/grenade_shell
-	name = "2x Grenade shells"
+	/datum/artificer_recipe/contraptions/death_shell
+	name = "2x Steam Grenades"
 	hammers_per_item = 2
 	created_item = /obj/item/ammo_casing/caseless/grenadeshell
 	required_item = /obj/item/ingot/tin
