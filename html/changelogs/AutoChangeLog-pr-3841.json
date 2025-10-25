@@ -1,1 +1,0 @@
-{"author":"Arkatos","delete-after":true,"changes":[{"rscadd":"Default king's tax rate changed from 11% to 10%."},{"rscadd":"Untaxed leftovers from depositing to MEISTER are now saved and are taxed in the future deposits when the untaxed amount is actually enough to be taxable. You can't escape paying taxes now, peasants."}]}

@@ -13547,9 +13547,6 @@
 "hLb" = (
 /turf/closed/wall/mineral/wooddark/horizontal,
 /area/rogue/under/town/basement)
-"hLq" = (
-/turf/closed/wall/mineral/stone,
-/area/rogue/outdoors/town/roofs)
 "hLN" = (
 /obj/structure/kneestingers,
 /obj/structure/flora/grass/water/reeds,
@@ -96429,7 +96426,7 @@ ehF
 ehF
 ehF
 ehF
-nvY
+gZy
 jja
 sWL
 swd
@@ -177635,7 +177632,7 @@ acx
 acx
 acx
 acx
-hLq
+acx
 fdp
 hVd
 hVd

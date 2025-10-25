@@ -313,7 +313,7 @@
 		spawned.set_flaw(forced_flaw)
 
 	if(spawned.charflaw)
-		spawned.charflaw.after_spawn(spawned)
+		spawned.charflaw.after_spawn(spawned, player_client)
 
 	if(antag_role && spawned.mind)
 		spawned.mind.add_antag_datum(antag_role)
