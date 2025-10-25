@@ -855,5 +855,36 @@
                 "rscadd": "puffer shot can be heard on the entire map"
             }
         ]
+    },
+    "2025-10-25": {
+        "DrSirKnight": [
+            {
+                "rscadd": "younglings can be nobles now"
+            },
+            {
+                "balance": "female noble mostly the same as male noble now"
+            }
+        ],
+        "Arkatos": [
+            {
+                "rscadd": "Default king's tax rate changed from 11% to 10%."
+            },
+            {
+                "rscadd": "Untaxed leftovers from depositing to MEISTER are now saved and are taxed in the future deposits when the untaxed amount is actually enough to be taxable. You can't escape paying taxes now, peasants."
+            }
+        ],
+        "wgtjunior743": [
+            {
+                "bugfix": "No flaw works properly for both latejoin and roundstart."
+            }
+        ],
+        "Wouju": [
+            {
+                "map": "removed a brazier in the apothecary garden that caused gnomes to get stuck on"
+            },
+            {
+                "balance": "Most surgery steps can now be performed by those with average in medicine, the difficulty is still the same"
+            }
+        ]
     }
 }
