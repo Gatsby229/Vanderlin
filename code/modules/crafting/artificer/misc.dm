@@ -285,6 +285,7 @@
 	hammers_per_item = 2
 	created_item = /obj/item/explosive/deathshell
 	required_item = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/gear/metal = 2)
 	craftdiff = 4
 	created_amount = 2
 
