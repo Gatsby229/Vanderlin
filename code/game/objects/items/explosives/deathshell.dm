@@ -1,4 +1,4 @@
-/obj/item/explosive/death_shell
+/obj/item/explosive/deathshell
 	name = "Death Shell"
 	desc = "A smooth shiny cylinder, bronze in color and material, with a styled indent on top that looks like a button. There is an archaic ticking noise inside, one which spells doom to all who dare defy the art of Malum."
 	icon_state = "deathshell"
