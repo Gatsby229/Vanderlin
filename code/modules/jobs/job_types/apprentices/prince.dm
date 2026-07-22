@@ -27,6 +27,7 @@
 
 
 	outfit = /datum/outfit/heir
+	tennite_triumph_exclusive = TRUE
 
 	spells = list(
 		/datum/action/cooldown/spell/undirected/list_target/grant_title,
@@ -135,13 +136,9 @@
 
 	traits = list(
 		TRAIT_MEDIUMARMOR,
-		TRAIT_BEAUTIFUL
+		TRAIT_BEAUTIFUL,
+		TRAIT_VIRGIN,
 	)
-
-/datum/job/advclass/heir/aristocrat/after_spawn(mob/living/carbon/human/spawned, client/player_client)
-	. = ..()
-	if(spawned.gender == FEMALE)
-		spawned.virginity = TRUE
 
 /datum/outfit/heir/aristocrat
 	name = "Sheltered Aristocrat (Prince)"
@@ -199,13 +196,9 @@
 	traits = list(
 		TRAIT_CRITICAL_WEAKNESS,
 		TRAIT_MEDIUMARMOR,
-		TRAIT_UGLY
+		TRAIT_UGLY,
+		TRAIT_VIRGIN,
 	)
-
-/datum/job/advclass/heir/inbred/after_spawn(mob/living/carbon/human/spawned, client/player_client)
-	. = ..()
-	if(spawned.gender == FEMALE)
-		spawned.virginity = TRUE
 
 /datum/outfit/heir/inbred
 	name = "Inbred Wastrel (Prince)"

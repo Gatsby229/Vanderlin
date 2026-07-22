@@ -61,7 +61,7 @@
 	item_state = "grenzelhat"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
 	detail_tag = "_detail"
-	detail_color = CLOTHING_RED
+	detail_color = CLOTHING_RED_OCHRE
 	dynamic_hair_suffix = ""
 	colorgrenz = TRUE
 	sellprice = VALUE_FANCY_HAT
@@ -109,7 +109,9 @@
 	flags_inv = HIDEEARS
 	sellprice = VALUE_CHEAP_STEEL_HELMET
 	max_integrity = INTEGRITY_STRONGEST
-	smeltresult = /obj/item/ingot/steel_slag
+	smeltresult = null
+	melting_material = /datum/material/steel
+	melt_amount = 50
 	body_parts_covered = COVERAGE_HEAD
 	item_weight = 2.2 KILOGRAMS
 
@@ -131,10 +133,12 @@
 	icon_state = "ikettle"
 	item_state = "ikettle"
 	sellprice = VALUE_CHEAP_IRON_HELMET
-	armor = ARMOR_SCALE
+	armor_type = /datum/armor/head/scale
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 2.2 KILOGRAMS
-	smeltresult = /obj/item/ingot/iron
+	smeltresult = null
+	melting_material = /datum/material/iron
+	melt_amount = 50
 
 /obj/item/clothing/head/helmet/kettle/aalloy
 	name = "decrepit kettle helmet"
@@ -161,10 +165,11 @@
 	icon_state = "islitkettle"
 	item_state = "islitkettle"
 	sellprice = VALUE_CHEAP_IRON_HELMET
-	armor = ARMOR_SCALE
+	armor_type = /datum/armor/head/scale
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 2.2 KILOGRAMS
 	smeltresult = /obj/item/ingot/iron
+	melting_material = /datum/material/iron
 
 //................ Iron Pot Helmet ............... //
 /obj/item/clothing/head/helmet/ironpot
@@ -183,7 +188,7 @@
 	item_state = "lakkaricap"
 	sellprice = 50
 	flags_inv = null
-	armor = ARMOR_SCALE
+	armor_type = /datum/armor/head/scale
 	anvilrepair = /datum/attribute/skill/craft/armor_repair
 	body_parts_covered = COVERAGE_HEAD
 	max_integrity = INTEGRITY_STRONG
@@ -198,7 +203,7 @@
 	smeltresult = /obj/item/ingot/copper
 	sellprice = VALUE_LEATHER_HELMET // until copper/new mats properly finished and integrated this is a stopgap
 
-	armor = ARMOR_PADDED_GOOD
+	armor_type = /datum/armor/head/padded/good
 	body_parts_covered = COVERAGE_HEAD
 	prevent_crits = ONLY_VITAL_ORGANS
 	max_integrity = INTEGRITY_POOR
@@ -217,7 +222,7 @@
 	blocksound = CHAINHIT
 	resistance_flags = FIRE_PROOF
 
-	armor = ARMOR_MAILLE_IRON
+	armor_type = /datum/armor/head/maille/iron
 	body_parts_covered = NECK|HAIR|EARS|HEAD
 	prevent_crits = ALL_EXCEPT_BLUNT
 	item_weight = 1.56 KILOGRAMS
@@ -234,7 +239,7 @@
 	blocksound = CHAINHIT
 	resistance_flags = FIRE_PROOF
 
-	armor = ARMOR_MAILLE
+	armor_type = /datum/armor/head/maille
 	body_parts_covered = NECK|HAIR|EARS|HEAD
 	prevent_crits = ALL_EXCEPT_BLUNT
 	item_weight = 1.56 KILOGRAMS
@@ -248,7 +253,7 @@
 	flags_inv = HIDEEARS
 	smeltresult = /obj/item/ingot/steel_slag
 	sellprice = VALUE_STEEL_HELMET
-	armor =  ARMOR_PLATE
+	armor_type = /datum/armor/head/plate
 	body_parts_covered = COVERAGE_HEAD
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 3.1 KILOGRAMS
@@ -274,7 +279,7 @@
 	desc = "A simple iron helmet with no attachments. Helps protect the ears."
 	smeltresult = /obj/item/ingot/iron
 	sellprice = VALUE_IRON_HELMET
-	armor =  ARMOR_PLATE_BAD
+	armor_type = /datum/armor/head/plate/bad
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 3.1 KILOGRAMS
 
@@ -350,7 +355,7 @@
 	unequip_delay_self = 3 SECONDS
 	smeltresult = /obj/item/ingot/steel_slag
 	sellprice = VALUE_STEEL_HELMET+BONUS_VALUE_TINY
-	armor = ARMOR_PLATE
+	armor_type = /datum/armor/head/plate
 	body_parts_covered = FULL_HEAD
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = ALL_CRITICAL_HITS
@@ -395,7 +400,7 @@
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	armor_class = AC_MEDIUM
-	armor = ARMOR_PLATE_GOOD
+	armor_type = /datum/armor/head/plate/good
 	item_weight = 6.4 KILOGRAMS
 	sellprice = VALUE_SILVER_ITEM * 2
 
@@ -414,8 +419,15 @@
 	item_weight = 3.25 KILOGRAMS
 	smeltresult = /obj/item/ingot/iron
 	sellprice = VALUE_IRON_HELMET+BONUS_VALUE_TINY
-	armor = ARMOR_PLATE_BAD
+	armor_type = /datum/armor/head/plate/bad
 	max_integrity = INTEGRITY_STRONG
+
+//............... Bellow Sallet ............... //
+/obj/item/clothing/head/helmet/visored/bellow
+	name = "bellow sallet"
+	desc = "An unorthodox approach of sallet design that includes a full face cover with holes for easier breathing."
+	icon_state = "sallet_bellow"
+	item_weight = 4.5 KILOGRAMS
 
 //............... Hounskull ............... //
 /obj/item/clothing/head/helmet/visored/hounskull
@@ -426,7 +438,7 @@
 	icon_state = "hounskull"
 	emote_environment = 3
 
-	armor = ARMOR_PLATE_GOOD
+	armor_type = /datum/armor/head/plate/good
 	item_weight = 4.45 KILOGRAMS
 
 //............... Knights Helmet ............... //
@@ -477,7 +489,7 @@
 	smeltresult = /obj/item/ingot/iron
 	sellprice = VALUE_IRON_HELMET+BONUS_VALUE_TINY
 
-	armor = ARMOR_PLATE_BAD
+	armor_type = /datum/armor/head/plate/bad
 	max_integrity = INTEGRITY_STRONG
 
 
@@ -485,7 +497,7 @@
 	name = "golden knight's armet"
 	desc = "A resplendant armet, masterfully forged from pure gold. Hexagrammic etchings of a holy sigil line its visor, and its interior is fitted with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
 	icon_state = "goldknight"
-	armor = ARMOR_HEAD_HELMET_VISOR //Renders its wearer completely invulnerable to damage. The caveat is, however..
+	armor_type = /datum/armor/head/plate/visor  //Renders its wearer completely invulnerable to damage. The caveat is, however..
 	max_integrity = ARMOR_INT_HELMET_HEAVY_IRON // ..is that it's extraordinarily fragile. To note, this is lower than even Decrepit-tier armor.
 	armor_class = AC_HEAVY //Ceremonial. Heavy is the head that bares the burden.
 	anvilrepair = null
@@ -501,17 +513,17 @@
 	item_weight = 5.6 KILOGRAMS
 
 /obj/item/clothing/head/helmet/visored/gold/attackby(obj/item/W, mob/living/user, params)
-	..()
-	if(istype(W, /obj/item/natural/feather) && !detail_tag)
-		var/choice = input(user, "Choose a color.", "Greatplume") as anything in COLOR_MAP
-		detail_color = COLOR_MAP[choice]
-		detail_tag = "_detail"
-		user.visible_message(span_warning("[user] adds [W] to [src]."))
-		user.transferItemToLoc(W, src, FALSE, FALSE)
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_head()
+	. = ..()
+	if(!istype(W, /obj/item/natural/feather) || detail_tag)
+		return
+	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	if(!choice)
+		return
+	user.visible_message(span_warning("[user] adds [W] to [src]."))
+	qdel(W)
+	detail_color = GLOB.noble_dyes[choice]
+	detail_tag = "_detail"
+	update_appearance(UPDATE_ICON)
 
 /obj/item/clothing/head/helmet/visored/gold/king
 	name = "royal golden armet"
@@ -538,8 +550,32 @@
 	item_weight = 4.45 KILOGRAMS
 
 //................. Town Watch Helmet .............. //
+
+/obj/item/clothing/head/helmet/watchmen
+	name = "town watchmen helmet"
+	desc = "An old helmet of iron, offers great visibility and suits well."
+	icon_state = "watchhelm"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/head.dmi'
+	icon = 'icons/roguetown/clothing/watchmen_item.dmi' // TODO: DUMP INTO APPROPRIATE FILE IF PR WILL BE APROVED
+	body_parts_covered = COVERAGE_HEAD
+	flags_inv = HIDEEARS|HIDEHAIR
+	max_integrity = INTEGRITY_STRONG
+	slot_flags = ITEM_SLOT_HEAD | ITEM_SLOT_HIP
+	smeltresult = /obj/item/ingot/iron
+	sellprice = VALUE_IRON_ARMOR_UNUSUAL
+	item_weight = 3.7 KILOGRAMS
+
+/obj/item/clothing/head/helmet/watchmen/lt
+	name = "town watch liutenant helmet"
+	desc = "An old helmet of iron, offers great visibility and suits well. This one have a feather on top, informing everybody, that wearer is a leader of city watch."
+	icon_state = "watchhelm_feather"
+	detail_tag = "_detail"
+	detail_color = CLOTHING_WHITE
+	uses_lord_coloring = LORD_PRIMARY
+
+// It will stay here to make sure nothing breaks
 /obj/item/clothing/head/helmet/townwatch
-	name = "town watch helmet"
+	name = "old watch helmet"
 	desc = "An old archaic helmet of a symbol long forgotten."
 	icon_state = "guardhelm"
 
@@ -635,7 +671,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	smeltresult = /obj/item/ingot/silver
 	allowed_ages = ALL_AGES_LIST //placeholder until younglings have onmob sprites for this item
-	armor = ARMOR_PLATE_SILVER
+	armor_type = /datum/armor/head/plate/silver
 	sellprice = VALUE_SILVER_ARMOR
 	item_weight = 6 KILOGRAMS
 	worn_x_dimension = 64
@@ -682,7 +718,7 @@
 	item_state = "bkhelm_visor"
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("blunt" = 90, "slash" = 100, "stab" = 80,  "piercing" = 100, "fire" = 0, "acid" = 0)
+	armor_type = /datum/armor/head/plate/blacksteel
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_TWIST, BCLASS_PICK)
 	block2add = FOV_RIGHT|FOV_LEFT
 	max_integrity = 425
@@ -716,7 +752,7 @@
 			user.dropItemToGround(src)
 			user.put_in_hands(P)
 		var/obj/item/bodypart/arm = user.get_active_hand()
-		arm?.bodypart_attacked_by(BCLASS_CUT, 25, modifiers = list(CRIT_MOD_CHANCE = -100))
+		arm?.bodypart_attacked_by(BCLASS_CUT, 25, modifiers = list(CRIT_MOD_CHANCE = CANT_CRIT))
 		qdel(src)
 	else
 		user.visible_message(span_warning("[user] stops reshaping [src]."))
@@ -739,17 +775,17 @@
 	melting_material = /datum/material/bronze
 
 /obj/item/clothing/head/helmet/bronze/attackby(obj/item/W, mob/living/user, params)
-	..()
-	if(istype(W, /obj/item/natural/feather) && !detail_tag)
-		var/choice = input(user, "Choose a color.", "Greatplume") as anything in COLOR_MAP
-		detail_color = COLOR_MAP[choice]
-		detail_tag = "_detail"
-		user.visible_message(span_warning("[user] adds [W] to [src]."))
-		user.transferItemToLoc(W, src, FALSE, FALSE)
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_head()
+	. = ..()
+	if(!istype(W, /obj/item/natural/feather) || detail_tag)
+		return
+	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	if(!choice)
+		return
+	user.visible_message(span_warning("[user] adds [W] to [src]."))
+	qdel(W)
+	detail_color = GLOB.noble_dyes[choice]
+	detail_tag = "_detail"
+	update_appearance(UPDATE_ICON)
 
 /obj/item/clothing/head/helmet/bronzegladiator
 	name = "bronze murmillo"
@@ -757,23 +793,25 @@
 	providing excellent coverage while ensuring one doesn't suffocate on their own adrenal huffs. </br>Out of all actorial labors, none surpass \
 	the reenactment of Ravox's duel against Graggar atop Ur-Syon's ruins - mythologized not as a tentacled star, but as a towering doppelganger-champion; \
 	sculpted by the followers of evil to be the inverse to all who stood for justice and chivalry."
+	icon_state = "bronzemurmillo"
+	item_state = "bronzemurmillo"
 	max_integrity = ARMOR_INT_HELMET_IRON - 100
 	armor_class = AC_LIGHT
 	material_category = ARMOR_MAT_PLATE
 	body_parts_covered = FULL_HEAD
-	icon_state = "bronzemurmillo"
-	item_state = "bronzemurmillo"
+
 	melting_material = /datum/material/bronze
 
 /obj/item/clothing/head/helmet/bronzegladiator/attackby(obj/item/W, mob/living/user, params)
-	..()
-	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
-		var/choice = input(user, "Choose a color.", "Orle") as anything in COLOR_MAP
-		user.visible_message(span_warning("[user] adds [W] to [src]."))
-		user.transferItemToLoc(W, src, FALSE, FALSE)
-		detail_color = COLOR_MAP[choice]
-		detail_tag = "_detail"
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_head()
+	. = ..()
+	if(!istype(W, /obj/item/natural/cloth) || detail_tag)
+		return
+	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	if(!choice)
+		return
+	user.visible_message(span_warning("[user] adds [W] to [src]."))
+	qdel(W)
+	detail_color = GLOB.noble_dyes[choice]
+	detail_tag = "_detail"
+	update_appearance(UPDATE_ICON)
+
